@@ -1,0 +1,38 @@
+From 9f21790fbbc6d3a457826db662a98d1a24d6d9d4 Mon Sep 17 00:00:00 2001
+From: Scott Ware <scott.r.ware@intel.com>
+Date: Thu, 11 Dec 2025 22:08:58 +0000
+Subject: [PATCH 3/3] Avoid downloading googleapis
+
+Upstream-Status: Pending
+
+Signed-off-by: Scott Ware <scott.r.ware@intel.com>
+---
+ external/googleapis/CMakeLists.txt | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/external/googleapis/CMakeLists.txt b/external/googleapis/CMakeLists.txt
+index e33a834a5d..4c1e4666a6 100644
+--- a/external/googleapis/CMakeLists.txt
++++ b/external/googleapis/CMakeLists.txt
+@@ -112,7 +112,7 @@ include(EnableWerror)
+ # the generated libraries.  The Conan packages (https://conan.io), will need to
+ # patch this value.  Setting the value in a single place makes such patching
+ # easier.
+-set(EXTERNAL_GOOGLEAPIS_PREFIX "${PROJECT_BINARY_DIR}/external/googleapis")
++set(EXTERNAL_GOOGLEAPIS_PREFIX "${PROJECT_SOURCE_DIR}/external/googleapis")
+ set(EXTERNAL_GOOGLEAPIS_SOURCE
+     "${EXTERNAL_GOOGLEAPIS_PREFIX}/src/googleapis_download"
+     PARENT_SCOPE)
+@@ -142,8 +142,7 @@ externalproject_add(
+     googleapis_download
+     EXCLUDE_FROM_ALL ON
+     PREFIX "${EXTERNAL_GOOGLEAPIS_PREFIX}"
+-    URL ${GOOGLE_CLOUD_CPP_GOOGLEAPIS_URL}
+-    URL_HASH SHA256=${GOOGLE_CLOUD_CPP_GOOGLEAPIS_URL_HASH}
++    SOURCE_DIR "${EXTERNAL_GOOGLEAPIS_SOURCE}"
+     PATCH_COMMAND
+         ""
+         # ~~~
+-- 
+2.43.0
+
