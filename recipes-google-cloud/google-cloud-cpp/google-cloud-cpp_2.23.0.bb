@@ -5,11 +5,13 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
 SRC_URI = "\
-    git://github.com/googleapis/google-cloud-cpp.git;protocol=https;branch=main \
+    git://github.com/googleapis/google-cloud-cpp.git;protocol=https;branch=main;rev=60768edc006fcdf97bb01c604d04cd47ccec668b;name=main \
+    git://github.com/googleapis/googleapis.git;protocol=https;branch=master;rev=f0ad2158a1b40b23afb18e39a956184b938fbc68;destsuffix=git/external/googleapis/src/googleapis_download;name=googleapis \
     file://0001-Remove-compiler-flags-from-build-info.patch \
+    file://0002-Avoid-downloading-googleapis.patch \
 "
 
-SRCREV = "60768edc006fcdf97bb01c604d04cd47ccec668b"
+SRCREV_FORMAT = "main"
 
 include ${BPN}.inc
 
