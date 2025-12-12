@@ -50,5 +50,5 @@ Patches
 Please submit any patches against the meta-iot-cloud layer to the
 maintainer:
 
-Maintainer: Scott Ware <scott.r.ware@intel.com>
+Maintainer: Scott Ware <scott.ware@altera.com>
 
