@@ -5,16 +5,13 @@ SECTION = "devel/python"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-inherit pypi setuptools3
-
-DEPENDS += "\
-    python3-protobuf \
-"
+inherit pypi python_setuptools_build_meta
 
 RDEPENDS:${PN} += "\
     python3-protobuf \
 "
 
-PR = "r0"
+SRC_URI[sha256sum] = "21a515a4c4c0088a773899e23c7bbade3d18f9c66c73edd4c7ee3816bc96a012"\
 
-SRC_URI[sha256sum] = "89075171ef11988b3fa157f5dbd8b9cf09d65fffee97e29ce403cd8defba19d2"
+PYPI_PACKAGE = "proto_plus"
+UPSTREAM_CHECK_PYPI_PACKAGE = "${PYPI_PACKAGE}"
