@@ -5,9 +5,7 @@ SECTION = "devel/python"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-inherit setuptools3 pypi
-
-PR = "r0"
+inherit pypi python_setuptools_build_meta
 
 RDEPENDS:${PN} += "\
     python3-google-api-core \
@@ -16,5 +14,7 @@ RDEPENDS:${PN} += "\
     python3-grpcio-status \
 "
 
-SRC_URI[sha256sum] = "9b7749272a812bde58fff28868d0c5e2f585b82f37e09a1f6ed2d4d10f134073"
+SRC_URI[sha256sum] = "7c1b7ef5c92311717bd05301aa1a91ffbc565673d3b0b4163a52d8413a186963"
 
+PYPI_PACKAGE = "google_cloud_core"
+UPSTREAM_CHECK_PYPI_PACKAGE = "${PYPI_PACKAGE}"
