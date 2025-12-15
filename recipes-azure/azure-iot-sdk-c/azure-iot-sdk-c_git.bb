@@ -8,8 +8,8 @@ SRC_URI = "\
     git://github.com/Azure/azure-iot-sdk-c.git;protocol=https;branch=main \
 "
 
-SRCREV = "09d4e9ca46d1facea7d6d0c7ac13e56edd0a715f"
+SRCREV = "5f11fab75f980591c7fabd861617addb6b7814df"
 
-PV = "1.13.0+git${SRCPV}"
+PV = "1.15.0+git${SRCPV}"
 
 include ${BPN}.inc
