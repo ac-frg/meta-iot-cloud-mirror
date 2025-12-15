@@ -5,7 +5,7 @@ SECTION = "devel/python"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-inherit pypi setuptools3
+inherit pypi python_setuptools_build_meta
 
 RDEPENDS:${PN} += "\
     python3-deprecation \
@@ -19,6 +19,7 @@ RDEPENDS:${PN} += "\
     python3-typing-extensions \
 "
 
-PR = "r0"
+SRC_URI[sha256sum] = "b6d48d4932c240025736ace544c4e71bc49a1576ac998ea1de778af82496ffce"
 
-SRC_URI[sha256sum] = "e03594497e35ba9020b50546e1346b51c492629b970e4e2c5e0ddc5c41c54cbe"
+PYPI_PACKAGE = "azure_iot_device"
+UPSTREAM_CHECK_PYPI_PACKAGE = "${PYPI_PACKAGE}"
