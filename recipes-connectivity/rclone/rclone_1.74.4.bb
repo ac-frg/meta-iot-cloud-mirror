@@ -16,8 +16,8 @@ GO_IMPORT = "github.com/rclone/rclone"
 GO_INSTALL = "${GO_IMPORT}"
 GO_LINKSHARED = ""
 
-SRC_URI = "git://${GO_IMPORT}.git;branch=v1.72-stable;protocol=https;destsuffix=src"
+SRC_URI = "git://${GO_IMPORT}.git;branch=v1.74-stable;protocol=https;destsuffix=src"
 
-SRCREV = "73bcae2245467725880653db714b936d58ea4f13"
+SRCREV = "5bc93a2a7ab0ebd0a11352bc4968eabeffb18027"
 
 S = "${UNPACKDIR}"
