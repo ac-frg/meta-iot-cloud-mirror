@@ -6,13 +6,13 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=e9ed01b5e5ac9eae23fc2bb33701220c"
 
 inherit cmake
 
-PR = "r0"
+PV = "1.1.0+git${SRCPV}"
 
 SRC_URI = "\
     git://github.com/google/crc32c.git;protocol=https;branch=main \
 "
 
-SRCREV = "02e65f4fd3065d27b2e29324800ca6d04df16126"
+SRCREV = "2bbb3be42e20a0e6c0f7b39dc07dc863d9ffbc07"
 
 EXTRA_OECMAKE += "\
     -DCRC32C_BUILD_TESTS=OFF \
